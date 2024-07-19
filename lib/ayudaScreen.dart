@@ -76,8 +76,8 @@ class AyudaScreen extends StatelessWidget {
                 },
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.redAccent),
-                  padding: MaterialStateProperty.all<EdgeInsets>(
+                      WidgetStateProperty.all<Color>(Colors.redAccent),
+                  padding: WidgetStateProperty.all<EdgeInsets>(
                       const EdgeInsets.symmetric(vertical: 16.0)),
                 ),
                 child: const Text('¿Tienes un error?',

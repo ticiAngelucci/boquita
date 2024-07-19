@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:logger/logger.dart';
-
-import 'ayudaScreen.dart';
+import 'package:bokita_app/ayudaScreen.dart';
 import 'quienesSomosScreen.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         colorScheme: const ColorScheme.light(primary: Colors.blueAccent),
         textTheme: const TextTheme(
-          titleLarge: TextStyle(color: Colors.white), // Cambia 'headline6' por 'titleLarge'
+          titleLarge: TextStyle(color: Colors.white),
         ),
       ),
       home: const MyHomePage(title: 'San Juniors'),
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   final String title;
 
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -138,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: Theme.of(context)
                             .textTheme
                             .titleLarge!
-                            .copyWith(color: Colors.white), // Cambia 'headline6' por 'titleLarge'
+                            .copyWith(color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),

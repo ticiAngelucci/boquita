@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatelessWidget {
+  const LoadingScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -13,7 +15,7 @@ class LoadingScreen extends StatelessWidget {
           ),
         ),
         // Indicador de progreso en el centro
-        Center(
+        const Center(
           child: CircularProgressIndicator(),
         ),
       ],
