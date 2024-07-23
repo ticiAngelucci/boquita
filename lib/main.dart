@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:logger/logger.dart';
-import 'package:bokita_app/ayudaScreen.dart';
-import 'quienesSomosScreen.dart';
+import 'package:bokita_app/screens/ayudaScreen.dart';
+import 'package:bokita_app/screens/quienesSomosScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'San Juniors',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         colorScheme: const ColorScheme.light(primary: Colors.blueAccent),

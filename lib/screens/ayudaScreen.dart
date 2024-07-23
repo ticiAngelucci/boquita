@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'reportarErrorScreen.dart';
+import './reportarErrorScreen.dart';
 
 class AyudaScreen extends StatelessWidget {
   const AyudaScreen({Key? key}) : super(key: key);
