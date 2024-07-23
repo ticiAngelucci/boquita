@@ -54,6 +54,21 @@ class _MyHomePageState extends State<MyHomePage> {
         model: 'gemini-1.5-flash',
         apiKey: "AIzaSyCg-Bob5NvvLn7bp239OCJoMAqq8ZHRzTw",
       );
+      final validationContent = [
+        Content.text(
+            '¿Es "$team" un equipo de fútbol? Responde con "sí" o "no" No uses false o true'),
+      ];
+      final validationResponse = await model.generateContent(validationContent);
+      final isFootballTeam =
+          validationResponse.text?.trim().toLowerCase() == 'sí';
+      print("respuesta $isFootballTeam");
+      if (!isFootballTeam) {
+        setState(() {
+          _nextMatch =
+              'La respuesta ingresada no es un equipo de fútbol válido.';
+        });
+        return;
+      }
       final content = [
         Content.text(
           'Jugadores actuales de $team y su director técnico? En una lista, que diga posición, nombre y número de camiseta',
